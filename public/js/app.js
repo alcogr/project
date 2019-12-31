@@ -49215,7 +49215,7 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "container mx-auto" }, [
+  return _c("div", { staticClass: "container mx-auto max-w-lg" }, [
     _c(
       "div",
       {
@@ -49248,7 +49248,7 @@ var render = function() {
             _vm._v("Example Component")
           ]),
           _vm._v(" "),
-          _c("div", { staticClass: "pt-2" }, [
+          _c("div", { staticClass: "pt-2 text-xs" }, [
             _vm._v("\n                I'm an example component.\n            ")
           ])
         ])
