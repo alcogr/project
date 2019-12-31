@@ -13,7 +13,7 @@
 
       
     </head>
-    <body>
+    <body class="bg-blue-600">
         <div id="app">
            <example-component></example-component>
         </div>
