@@ -49198,11 +49198,12 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-    mounted: function mounted() {
-        console.log('Component mounted.');
+    data: function data() {
+        return {
+            show: true
+        };
     }
 });
 
@@ -49214,38 +49215,48 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
-}
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "container mx-auto" }, [
-      _c("div", { staticClass: "row justify-content-center" }, [
-        _c(
-          "div",
+  return _c("div", { staticClass: "container mx-auto" }, [
+    _c(
+      "div",
+      {
+        directives: [
           {
-            staticClass: "flex flex-col bg-white m-10 p-4 shadow-lg rounded-lg"
-          },
-          [
-            _c("div", { staticClass: "card card-default" }, [
-              _c("div", { staticClass: "border-b-2 pb-2" }, [
-                _vm._v("Example Component")
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "pt-2" }, [
-                _vm._v(
-                  "\n                    I'm an example component.\n                "
-                )
-              ])
-            ])
-          ]
-        )
-      ])
-    ])
-  }
-]
+            name: "show",
+            rawName: "v-show",
+            value: _vm.show == true,
+            expression: "show==true"
+          }
+        ],
+        staticClass: "flex flex-col bg-white m-10 p-4 shadow-lg rounded-lg"
+      },
+      [
+        _c("div", { staticClass: "relative" }, [
+          _c(
+            "div",
+            {
+              staticClass: "absolute right-0",
+              on: {
+                click: function($event) {
+                  _vm.show = false
+                }
+              }
+            },
+            [_c("i", { staticClass: "text-red-400 fa fa-times" })]
+          ),
+          _vm._v(" "),
+          _c("div", { staticClass: "border-b-2 pb-2" }, [
+            _vm._v("Example Component")
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "pt-2" }, [
+            _vm._v("\n                I'm an example component.\n            ")
+          ])
+        ])
+      ]
+    )
+  ])
+}
+var staticRenderFns = []
 render._withStripped = true
 module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
